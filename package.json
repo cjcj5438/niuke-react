@@ -1,14 +1,23 @@
 {
   "name": "app-ecs",
   "version": "0.1.0",
+  "babel": {
+    "presets": ["react"],
+    "plugins": [["import", [{ "libraryName": "antd-mobile", "style": "css" }]]]
+  },
   "private": true,
   "dependencies": {
+    "antd-mobile": "^2.2.9",
+    "customize-cra": "^0.2.12",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.17",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -21,5 +30,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-plugin-import": "^1.11.0",
+    "react-app-rewired": "^1.2.9"
+  }
 }
